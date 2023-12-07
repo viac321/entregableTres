@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Location } from "./components/Location";
 import { ResidentList } from "./components/ResidentList";
 import { getRandomNumbers } from "./helpers/random";
+import DarkMode from "./components/DarkMode";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <main className="bg-black text-white min-h-screen w-[100%] bg-[url('/bg/bgMain.jpg')] bg-cover ">
       <Location locationInfo={locationInfo} setLocationInfo={setLocationInfo} />
       <ResidentList residents={locationInfo?.residents || []} />
+      <DarkMode />
     </main>
   );
 }
