@@ -20,7 +20,7 @@ export const ResidentList = ({ residents }) => {
 
   return (
     <>
-      <section className="my-10  grid gap-8 grid-cols-[repeat(auto-fill,_250px)] justify-center max-w-[1200px] mx-auto ">
+      <section className="my-10 grid gap-8 grid-cols-[repeat(auto-fill,_250px)] justify-center max-w-[1200px] mx-auto ">
         {residentsInCurrentPage.map((resident) => (
             <ResidentCard residentURL={resident} key={resident} />
         ))}
@@ -29,8 +29,8 @@ export const ResidentList = ({ residents }) => {
       
       <ul className="flex gap-6 p-4 flex-wrap items-center justify-center ">
         {pages.map((page) => (
-          <li className="dark:bg-[#EDE288] black:rounded-full black:border-[#893446] border-3" key={page}>
-            <button className={`p-4 dark:text-[#893446]  ${page === currentPage ? "bg-gray-500 black:bg-[#C9BEDC]" : ""} `} onClick={() => handleNewPage(page)}>{page}</button>
+          <li  key={page}>
+            <button className={`p-4 dark:bg-[#EDE288] dark:border-4 dark:rounded-full dark:border-[#893446] dark:text-[#893446]  ${page === currentPage ? "bg-gray-500" : ""} `} onClick={() => handleNewPage(page)}>{page}</button>
           </li>
         ))}
       </ul>
